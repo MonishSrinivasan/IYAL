@@ -63,8 +63,8 @@ function HomePage() {
     setLoading(true);
 
     emailjs.send(
-      'service_y7y3jj4',
-      'template_wbcjjqu',
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       {
         first_name: formData.first,
         last_name: formData.last,
@@ -72,7 +72,7 @@ function HomePage() {
         phone: formData.phone,
         requirement: formData.requirement,
       },
-      'iRVbhpxvvh10lyLhg'
+      import.meta.env.VITE_EMAILJS_USER_ID
     ).then(() => {
       setLoading(false);
       alert('Form submitted successfully!');
