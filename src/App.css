@@ -1,0 +1,360 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Header */
+.header {
+  background: #3f4c37;
+  color: white;
+  padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.contact-btn {
+  background-color: white;
+  color: #171717;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.contact-btn:hover {
+  background-color: #e5e5e5;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url('./background01.jpg'); /* Correct path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 2.5rem;
+}
+
+.hero-text {
+  background: linear-gradient(to right, rgba(38, 38, 38, 0.8), rgba(64, 64, 64, 0.6));
+  color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 600px;
+}
+.hero-text h1 {
+  font-size: 30px;
+}
+
+.learn-more {
+  background-color: white;
+  color: #171717;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+.learn-more:hover {
+  background-color: #e5e5e5;
+}
+
+/* About, Products, Contact */
+.about, .products, .contact {
+  padding: 4rem 2.5rem;
+}
+.about {
+  background-color: #3f4c37;
+  color: white;
+  /* padding-left: 90px; */
+}
+.about h1{
+  margin-left: 5%;
+}
+/* .about img{
+  width:638px;
+  height:850px;
+} */
+.about h2, .products h2, .contact h2 {
+  font-size: 40px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.about-grid p {
+  font-size: 25px;
+}
+/* .about-grid-1 img{
+  width:475px;
+  height:312px;
+} */
+.about-grid-1{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* .about-grid-1 img{
+  height:312px;
+  width:475px;
+} */
+/* Products Section */
+.products {
+  background-color: #3f4c37;
+  color: white;
+  padding: 90px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.rounded-img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  gap: 2.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.product-item {
+  flex: 0 0 calc(100% / 3 - 1rem);
+  scroll-snap-align: start;
+  background: #4b5a42;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel Arrows */
+.arrow {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  color: white;
+}
+.arrow:focus {
+  outline: none;
+}
+.left, .right {
+  outline: none;
+  border: none;
+}
+
+/* Contact */
+.contact {
+  background-color: #3f4c37;
+  color: white;
+  padding-left: 90px;
+}
+.contact p {
+  font-size: 20px;
+  margin-top: 3px;
+  margin-bottom: 70px;
+}
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+}
+.contact-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contact-form div input,
+.contact-form div textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #FFFFF0;
+  color: #FFFFF0;
+  outline: none;
+  font-size: 17px;
+  width: 100%;
+}
+.contact-form div textarea {
+  resize: none;
+}
+.contact-form button {
+  background-color: white;
+  color: #171717;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+.contact-form button:hover {
+  background-color: #e5e5e5;
+}
+
+/* Footer */
+.footer {
+  background-color: #3f4c37;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+.fotter-cont{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.fotter-contact-cont{
+   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.comp-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  gap:30px;
+}
+#hrabovecontact hr {
+  border: 1px solid white;
+  margin: 0 auto;
+  width: 90%;
+}
+#hrabovecontact {
+  background: #3f4c37;
+}
+
+/* Spinner Overlay */
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 41, 55, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid transparent;
+  border-top: 6px solid #4ade80;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+  box-shadow: 0 0 10px #4ade80, 0 0 20px #4ade80;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .about-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .carousel {
+    gap: 1.5rem;
+  }
+  .product-item {
+    flex: 0 0 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .nav a {
+    margin: 0.5rem 0;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  .hero-text h1 {
+    font-size: 24px;
+  }
+  .contact-form {
+    width: 100%;
+
+  }
+  .about{
+    padding-left: 40px;
+  }
+  .products{
+    padding-left: 40px;
+    padding-right: 40PX;
+  }
+  .contact {
+    padding-left: 40px;
+  }
+
+  .about h2, .products h2, .contact h2 {
+    font-size: 30px;
+  }
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
